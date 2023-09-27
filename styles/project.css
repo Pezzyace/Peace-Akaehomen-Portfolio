@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Martian Mono', monospace;;
+}
+.logo{
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: hwb(0 100% 0%);
+  margin-right: 50px;
+  cursor: pointer
+}
+body{
+  background-image: url(/assets/02.jfif);
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+.container1 .back-link{
+  text-decoration: none;
+  display: inline-block;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 20px;
+}
+.back-link{
+  color: white;
+  border-bottom: 2px solid red;
+  display: inline-flex;
+  transition: .2s;
+  padding-bottom: 2px;
+}
+.back-link:hover{
+  border-bottom: 2px solid black;
+}
+.top-projects h2, .project-wrapper h2{
+  font-size: 15px;
+  border-left: 3px solid red;
+  padding-left: 5px;
+}
+.top-projects section{
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.top-projects section .project{
+  width: 350px;
+}
+.project-container{
+  position: relative;
+  overflow: hidden;
+}
+.project-container{
+  background-image: url(../assets/01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container1{
+  z-index: 10;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 30px;
+  position: relative;
+}
+.project-container .container1 h2{
+  color: hsl(0, 0%, 100%);
+  z-index: 10;
+  margin-bottom: 20px;
+}
+.project-wrapper{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.project{
+  border: 2px solid hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 10px;
+}
+.project .project-img{
+  margin-bottom: 20px;
+  object-fit: cover;
+  width: 100%;
+}
+.project-info a{
+  text-decoration: none;
+}
+.project-info h4{
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+}
+.language-wrapper img{
+  width: 25px;
+}
+.courtesy{
+  color: hsl(0, 1%, 58%);
+  margin-bottom: 20px;
+  font-size: 10px;
+  text-align: end;
+}
+.courtesy span{
+  cursor: pointer;
+}
+.courtesy span a{
+  text-decoration: none;
+  color: hsl(0, 1%, 58%);
+}
+
+
+@media (width <= 375px){
+  .top-projects section{
+    flex-direction: column;
+  }
+  .top-projects section .project{
+    width: 100%;
+  }
+  .project-wrapper .row{
+    grid-template-columns: 1fr;
+  }
+}
