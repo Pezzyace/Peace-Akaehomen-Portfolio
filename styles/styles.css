@@ -68,6 +68,9 @@ nav ul{
 .nav-link:hover::after{
   transform:scaleX(1);
 }
+.hamburger{
+  display: none;
+}
 nav button{
   border: none;
   padding: 10px 20px;
@@ -285,6 +288,7 @@ footer{
   color: hsl(0, 0%, 100%);
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .phone-container a ion-icon, .email-container a ion-icon{
   margin-right: 10px;
@@ -296,7 +300,7 @@ footer{
     display: none;
   }
   .profile-container{
-    padding-top: 10px;
+    padding-top: 0;
     height: 100vh;
     width: 100%;
     margin-bottom: 0px;
@@ -386,5 +390,66 @@ footer{
   }
   .phone-container a{
     margin-bottom: 10px;
+  }
+  .hamburger{
+    display: flex;
+    position: absolute;
+    width: 25px;
+    z-index: 10;
+    left: 46.5%;
+    top: 20px;
+    opacity: 0.8;
+    transition: .5s;
+  }
+  .hamburger:hover{
+    opacity: 1;
+  }
+  .mobile-nav{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: hsla(0, 0%, 0%, 0.472);
+    padding: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .nav{
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    background-color: black;
+  }
+  .nav .logo{
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .nav .close-btn{
+    width: 20px;
+    opacity: .5;
+    transition: .5s;
+    margin-top: 10px;
+  }
+  .nav .close-btn:hover{
+    opacity: 1;
+  }
+  .mobile-nav ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+  .mobile-nav ul li{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .mobile-nav ul li a{
+    margin: 0;
   }
 }
