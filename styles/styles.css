@@ -2,54 +2,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
   font-family: 'Martian Mono', monospace;;
+}
+:root{
+  --crack: #fff;
+  --soot: #000;
+}
+h2{
+  color: var(--crack);
+  z-index: 10;
+  margin-bottom: 2rem;
+  padding-left: 5px;
+  border-left: 5px solid hsl(0, 100%, 50%);
+}
+p{
+  font-family: 'Cabin', sans-serif;
+}
+.container{
+  z-index: 10;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  position: relative;
+}
+
+
+
+/**************************** NAV ****************************/
+.hero{
+  background: var(--soot);
+  height: 100vh;
+}
+.nav{
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  padding: 1.5rem 14rem;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  width: 100%;
 }
 .logo{
   font-family: 'Cabin', sans-serif;
   font-weight: 700;
-  font-size: 30px;
-  color: hwb(0 100% 0%);
-  margin-right: 50px;
+  font-size: 2.5rem;
+  color: var(--crack);
   cursor: pointer;
   z-index: 10;
-  position: relative;
 }
-nav{
+.nav ul{
   display: flex;
-  z-index: 100;
-  position: fixed;
-  padding: 30px 70px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.mobile-nav{
-  display: none;
-}
-.window-scroll{
-  background: hsla(0, 0%, 0%);
-  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
-}
-.hero{
-  background: url(../assets/Gosha.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-section nav{
-  display: flex;
-  align-items: center;
-}
-nav ul{
-  display: flex;
-  list-style-type: none;
-  margin-right: 30px;
+  gap: 3rem;
 }
 .nav-link{
   text-decoration: none;
-  color: white;
+  color: var(--crack);
   text-transform: uppercase;
-  margin-right: 30px;
   position: relative;
 }
 .nav-link::after{
@@ -59,7 +70,7 @@ nav ul{
   bottom: -6px;
   width: 100%;
   height: 3px;
-  background: hsl(0, 0%, 100%);
+  background: var(--crack);
   border-radius: 5px;
   transform-origin: right;
   transform: scaleX(0);
@@ -68,50 +79,71 @@ nav ul{
 .nav-link:hover::after{
   transform:scaleX(1);
 }
-.hamburger{
-  display: none;
-}
-nav button{
+.message{
   border: none;
-  padding: 10px 20px;
+  padding: 0.9rem;
   background: transparent;
   border-radius: 5px;
-  color: hsl(0, 0%, 100%);
+  border: 1px solid var(--crack);
+  color: var(--crack);
   font-size: 11px;
   cursor: pointer;
   transition: .5s;
 }
-nav button:hover{
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 0%);
+.message:hover{
+  background-color: var(--crack);
+  color: var(--soot);
+  border-color: transparent;
 }
+.hamburger{
+  display: none;
+}
+.close-btn{
+  display: none;
+}
+
+/* SCROLL EFFECT */
+.window-scroll{
+  background: hsla(0, 0%, 0%);
+  box-shadow: 0 1rem 2rem hsla(0, 0%, 0%, 0.2);
+}
+
+
+/*****************PROFILE-CONTAINER*************/
 .profile-container{
-  position: relative;
-  z-index: 5;
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
-  padding-top: 120px;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
+  padding-top: 6rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
   align-items: center;
   justify-content: center;
 }
 .profile-container .profile-pic{
-  height: 250px;
+  height: 35rem;
   border-radius: 50%;
   margin-bottom: 30px;
   z-index: 1;
-  border: 5px solid hsl(0, 0%, 100%);
+  border: 5px solid var(--crack);
 }
-.profile-container h2{
-  color: hsl(0, 0%, 100%);
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.profile-info h1{
+  color: var(--crack);
   font-size: 30px;
   margin-bottom: 10px;
+  text-align: center;
 }
-.profile-container .level, .bio{
+.profile-info .level, .bio{
   margin-bottom: 20px;
   color: hsl(0, 1%, 58%);
+  text-align: center;
 }
 .developer-icons a{
   text-decoration: none;
@@ -119,6 +151,9 @@ nav button:hover{
 .dev-icon{
   height: 40px;
 }
+
+
+/************************** PROJECTS ******************************/
 .project-container{
   position: relative;
   overflow: hidden;
@@ -126,62 +161,49 @@ nav button:hover{
   background-size: cover;
   background-repeat: no-repeat;
 }
-.container1, .container2, .container3{
-  z-index: 10;
-  width: 85%;
-  margin: 0 auto;
-  padding-top: 30px;
-  position: relative;
-}
-.project-container .container1 h2, .container2 h2, .container3 h2{
-  color: hsl(0, 0%, 100%);
-  z-index: 10;
-  margin-bottom: 20px;
-  padding-left: 5px;
-  border-left: 5px solid hsl(0, 100%, 50%);
-}
 .project-wrapper{
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-.project-wrapper .line{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 .project{
-  border: 2px solid hsl(0, 0%, 100%);
-  padding: 20px;
-  border-radius: 10px;
+  border: 1px dashed var(--crack);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+.project:hover{
+  transform: translateY(0.4rem);
+}
+.project:hover .language-wrapper{
+  display: flex;
+  justify-content: space-between;
 }
 .project .project-img{
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   object-fit: cover;
   width: 100%;
 }
 .project-info h4{
-  margin-bottom: 10px;
-  font-size: 15px;
-  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--crack);
+}
+.language-wrapper{
+  transition: all 500ms ease-in-out;
 }
 .language-wrapper img{
-  width: 25px;
-}
-.project-wrapper a{
-  text-decoration: none;
-  display: flex;
-  position: relative;
+  width: 1.5rem;
 }
 .project-link{
-  color: white;
+  color: var(--crack);
   display: flex;
   justify-content: flex-end;
   transition: .2s;
   padding-bottom: 2px;
+  margin-bottom: 3rem;
 }
 .project-link p{
   border-bottom: 2px solid hsl(0, 100%, 50%);
@@ -190,37 +212,36 @@ nav button:hover{
   border-bottom: 2px solid hsla(0, 100%, 50%, 0);
 }
 
+
+/********************* CERTIFICATES *******************************/
 .certification-container{
-  position: relative;
-  overflow: hidden;
-  background: url(../assets/02.jfif);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: var(--soot);
 }
 .certification-wrapper{
-  display: flex;
-  gap: 50px;
-  margin: 0 0 50px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 3rem;
 }
 .certificate{
-  width: 350px;
   padding: 20px;
   border-radius: 5px;
-  border: 2px solid hsl(0, 0%, 100%);
+  border: 2px solid var(--crack);
 }
 .certificate a{
   text-decoration: none;
 }
 .certificate a h3{
-  color: hsl(0, 0%, 100%);
+  color: var(--crack);
+  margin-bottom: 0.8rem;
 }
 .certificate a p{
   color: hsl(0, 1%, 58%);
-  padding-bottom: 20px;
+  padding-bottom: 1.5rem;
   transition: 0.5s;
 }
 .certificate a p:hover{
-  color: hsl(0, 0%, 100%);
+  color: var(--crack);
 }
 .certificate a .cert-img{
   margin-bottom: 15px;
@@ -228,10 +249,7 @@ nav button:hover{
   width: 100%;
 }
 
-.certification-info h3{
-  margin-bottom: 10px;
-}
-
+/************************ SOCIAL CONTAINER ***********************/
 .social-container{
   position: relative;
   overflow: hidden;
@@ -253,7 +271,6 @@ nav button:hover{
 }
 .social-wrapper a{
   display: flex;
-  text-decoration: none;
   align-items: center;
 }
 .social-wrapper a img{
@@ -261,11 +278,14 @@ nav button:hover{
   margin-right: 5px;
 }
 .social-wrapper a p{
-  color: hsl(0, 0%, 100%);
+  color: var(--crack);
 }
 .social-wrapper a p:hover{
   text-decoration: underline;
 }
+
+
+/********************** FOOTER ******************/
 footer{
   background-color:hsl(0, 0%, 0%);
   border-top: 3px solid red;
@@ -285,7 +305,7 @@ footer{
 }
 .phone-container a, .email-container a{
   text-decoration: none;
-  color: hsl(0, 0%, 100%);
+  color: var(--crack);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -295,74 +315,108 @@ footer{
  font-size: 20px;
 }
 
-@media (width <= 375px){
-  .desktop-nav{
-    display: none;
-  }
+
+/* MOBILE MEDIA QUIREY */
+
+@media screen and (max-width: 1090px) {
   .profile-container{
-    padding-top: 0;
-    height: 100vh;
-    width: 100%;
-    margin-bottom: 0px;
-    background: url(../assets/Gosha.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    width: 80%;
   }
   .profile-container .profile-pic{
-    height: 200px;
+    height: 30rem;
+  }
+}
+@media screen and (max-width: 890px) {
+  .profile-container{
+    width: 90%;
+  }
+  .nav{
+    padding: 2rem 1rem;
+  }
+}
+
+@media (width <= 768px){
+  .hero{
+    background-color: var(--soot);
+  }
+  .nav{
+    position: absolute;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--crack);
+    width: 80%;
+    left: 50%;
+    top: -100%;
+    transition: all 500ms ease-in-out;
+    transform: translateX(-50%);
+  }
+  .show{
+    top: 0;
+  }
+  .nav ul{
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .nav-link{
+    color: var(--soot);
+    font-size: 0.8rem;
+    transition: all 300ms ease-in-out;
+  }
+  .nav-link:hover{
+    font-size: 1rem;
+  }
+  .hamburger{
+    display: flex;
+    position: absolute;
+    width: 25px;
+    z-index: 10;
+    left: 50%;
+    top: 20px;
+    opacity: 0.8;
+    transition: .5s;
+    cursor: pointer;
+  }
+  .close-btn{
+    display: flex;
+    width: 2rem;
+    cursor: pointer;
+  }
+  .logo{
+    color: var(--soot);
+  }
+  .hamburger:hover{
+    opacity: 1;
+  }
+  .message{
+    color: var(--soot);
+    border: 1px dotted var(--soot);
+  }
+  .profile-container{
+    height: 100vh;
+    width: 80%;
+  }
+  .profile-container .profile-pic{
+    width: 100%;
+    height: 100%;
   }
   .hero .body-img{
     display: none;
   }
-  .profile-container .name{
-    font-size: 25px;
+  .profile-container h1{
+    font-size: 1.5rem;
   }
-  .profile-container .level{
-    width: 80%;
+  .profile-info .level, .bio{
+    width: 90%;
     line-height: 1.5;
-  }
-  .profile-container p{
-    text-align: center;
-    font-size: 13px;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
   }
   .dev-icon{
-    width: 30px;
-    height: 30px;
-  }
-  .project-container{
-    background: url(../assets/03.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .project-container .project-bg-img{
-    display: none;
-  }
-  .project-wrapper{
-    margin-bottom: 20px;
-  }
-  .project-wrapper .line{
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-  .project{
-    width: 320px;
+   height: 2rem;
   }
   .certification-container{
-    background: url(../assets/02.jfif);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .certification-container .cert-bg-img{
-    display: none;
-  }
-  .certification-wrapper{
-    flex-direction: column;
-    margin-left: 0;
-  }
-  .certificate{
-    width: 320px;
+   background-color: var(--soot);
   }
   .social-container{
     background: url(../assets/03.png);
@@ -373,83 +427,76 @@ footer{
     display: none;
   }
   .social-wrapper{
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
   .social-wrapper a{
-    margin-bottom: 30px;
+     justify-content: center;
   }
   .container4{
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
   .container4 .logo{
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 1.5rem;
   }
   .phone-container a{
     margin-bottom: 10px;
   }
-  .hamburger{
-    display: flex;
-    position: absolute;
-    width: 25px;
-    z-index: 10;
-    left: 46.5%;
-    top: 20px;
-    opacity: 0.8;
-    transition: .5s;
-  }
-  .hamburger:hover{
-    opacity: 1;
-  }
-  .mobile-nav{
-    display: none;
-    width: 100%;
-    height: 100vh;
-    background-color: hsla(0, 0%, 0%, 0.472);
-    padding: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
+}
+
+@media screen and (max-width: 550px) {
+  h2{
+    text-align: center;
+    border-left-color: transparent;
+    text-decoration: underline;
   }
   .nav{
-    z-index: 10;
-    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0;
-    background-color: black;
   }
-  .nav .logo{
-    margin: 0;
-    padding-bottom: 20px;
+  .profile-container{
+    grid-template-columns: 1fr;
+    padding-top: 3rem;
   }
-  .nav .close-btn{
-    width: 20px;
-    opacity: .5;
-    transition: .5s;
-    margin-top: 10px;
-  }
-  .nav .close-btn:hover{
-    opacity: 1;
-  }
-  .mobile-nav ul{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-  }
-  .mobile-nav ul li{
-    margin-bottom: 20px;
+  .profile-picture-wrapper{
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
   }
-  .mobile-nav ul li a{
-    margin: 0;
+  .profile-container .profile-pic{
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+  }
+  .profile-info{
+    margin-top: -10rem;
+  }
+  .project-wrapper{
+    grid-template-columns: 1fr;
+    
+  }
+  .certification-wrapper{
+    grid-template-columns: 1fr;
+  }
+  .social-wrapper{
+    grid-template-columns: 1fr;
+    gap: 0.8rem
+  }
+  .social-wrapper a img{
+    display: none;
+  }
+  .social-wrapper a p{
+    font-weight: 400;
+  }
+  .social-wrapper h2{
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (430px < width <= 550px) {
+  .profile-info{
+    margin-top: -5rem;
   }
 }

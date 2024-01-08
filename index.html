@@ -3,160 +3,168 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  
+  <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Martian+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- STYLES -->
   <link rel="stylesheet" href="styles/styles.css">
+
   <title>Peace Akaehomen | Portfolio</title>
 </head>
-
 <body>
-  <section class="hero">
+  <header class="hero">
     <!--Desktop Nav-->
-    <nav class="desktop-nav">
-      <p class="logo">AGC</p>
+    <nav class="nav window-scroll" id="navigation">
+      <a href="#profile" class="">
+        <p class="logo">AGC</p>
+      </a>
+
       <ul>
-        <li><a href="#" class="nav-link">Profile</a></li>
         <li><a href="#project" class="nav-link">Projects</a></li>
         <li><a href="#certificate" class="nav-link">Certifications</a></li>
         <li><a href="#social" class="nav-link">Social</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="message">Send a message</button>
+
+      <a href="https://peacedavid049@gmail.com">
+        <button class="message">Send a message</button>
+      </a>
+
+      <img src="assets/chevron-up-svgrepo-com.svg" alt="" class="close-btn" id="close-btn">
     </nav>
-    <!--Mobile Nav-->
-    <nav class="mobile-nav" id="navigation">
-      <div class="nav">
-        <p class="logo">AGC</p>
-        <ul>
-          <li><a href="#" class="nav-link">Profile</a></li>
-          <li><a href="#project" class="nav-link">Projects</a></li>
-          <li><a href="#certificate" class="nav-link">Certifications</a></li>
-          <li><a href="#social" class="nav-link">Social</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <a href="https://peacedavid049@gmail.com">
-          <button class="message">Send a message</button>
-        </a>
-        <img src="assets/chevron-up-svgrepo-com.svg" alt="" class="close-btn" id="close-btn">
-      </div>
-    </nav>
+
     <img src="assets/hamburger-svgrepo-com.svg" alt="" class="hamburger" id="nav">
-    <!--Hero Section-->
-    <section class="profile-container">
-      <img src="assets/pezzyace_1696356635342.jpeg" alt="profile-pic" class="profile-pic">
-      <h2 class="name">Peace Akaehomen</h2>
-      <p class="level">Adept Frontend website developer | UI/UX designer</p>
-      <p class="bio">A good Designer</p>
-      <div class="developer-icons">
-        <a href="#">
-          <img src="assets/icons8-developer-64.png" alt="" class="dev-icon">
-        </a>
-        <a href="#project">
-          <img src="assets/icons8-designer-100.png" alt="" class="dev-icon">
-        </a>
-        <a href="#certificate">
-          <img src="assets/icons8-qr-code-100.png" alt="" class="dev-icon">
-        </a>
+
+    <!--Profile Section-->
+    <section class="profile-container" id="profile">
+      <div class="profile-picture-wrapper">
+        <img src="assets/pezzyace_1696356635342.jpeg" alt="profile-pic" class="profile-pic">
       </div>
-    </section>
-  </section>
-  <main>
-    <section class="project-container" id="project">
-      <div class="container1">
-        <h2>Featured Projects</h2>
-        <div class="project-wrapper">
-          <div class="line">
-            <div class="project">
-              <img src="assets/tickergrape.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://www.tickergrape.com">
-                  <h4 class="project-name">TickerGrape.com</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                  <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="assets/earnify.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://pezzyace.github.io/earnify-server/">
-                  <h4 class="project-name">Earnify Site</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                  <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="assets/Desktop view8.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://pezzyace.github.io/NFT-preview-card-component/">
-                  <h4 class="project-name">Chat app</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="line">
-            <div class="project">
-              <img src="assets/Desktop view1.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://pezzyace.github.io/news-hompage-using-sass/">
-                  <h4 class="project-name">News Hompage</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                  <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-sass-avatar-480.png" alt="html logo" class="html-logo">
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="assets/Desktop view2.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://pezzyace.github.io/Interactive-Rating-component/">
-                  <h4 class="project-name">Interactive Rating component</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                  <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <img src="assets/Desktop view 4.jpg" alt="project image" class="project-img">
-              <div class="project-info">
-                <a href="https://pezzyace.github.io/advice-app-server/">
-                  <h4 class="project-name">Advice Generator</h4>
-                </a>
-                <div class="language-wrapper">
-                  <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
-                  <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
-                  <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
-                </div>
-              </div>
-            </div>
-          </div>
-          <a href="project.html" class="project-link"><p>See more</p></a>
+      <div class="profile-info">
+        <h1>Peace Akaehomen</h1>
+        <p class="level">Adept Frontend website developer | UI/UX designer</p>
+        <p class="bio">A good Designer</p>
+        <div class="developer-icons">
+          <a href="#">
+            <img src="assets/icons8-developer-64.png" alt="" class="dev-icon">
+          </a>
+          <a href="#project">
+            <img src="assets/icons8-designer-100.png" alt="" class="dev-icon">
+          </a>
+          <a href="#certificate">
+            <img src="assets/icons8-qr-code-100.png" alt="" class="dev-icon">
+          </a>
         </div>
       </div>
     </section>
+
+  </header>
+
+  <main>
+    <section class="project-container" id="project">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="project-wrapper">
+          <div class="project">
+            <img src="assets/tickergrape.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://www.tickergrape.com">
+                <h4 class="project-name">TickerGrape.com</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+                <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="assets/earnify.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://pezzyace.github.io/earnify-server/">
+                <h4 class="project-name">Earnify Site</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+                <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="assets/Desktop view8.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://pezzyace.github.io/NFT-preview-card-component/">
+                <h4 class="project-name">Chat app</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="assets/Desktop view1.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://pezzyace.github.io/news-hompage-using-sass/">
+                <h4 class="project-name">News Hompage</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+                <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-sass-avatar-480.png" alt="html logo" class="html-logo">
+              </div>
+            </div>
+          </div>
+
+          <div class="project">
+            <img src="assets/Desktop view2.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://pezzyace.github.io/Interactive-Rating-component/">
+                <h4 class="project-name">Interactive Rating component</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+                <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
+              </div>
+            </div>
+          </div>
+          
+          <div class="project">
+            <img src="assets/Desktop view 4.jpg" alt="project image" class="project-img">
+            <div class="project-info">
+              <a href="https://pezzyace.github.io/advice-app-server/">
+                <h4 class="project-name">Advice Generator</h4>
+              </a>
+              <div class="language-wrapper">
+                <img src="assets/icons8-html-logo-48.png" alt="html logo" class="html-logo">
+                <img src="assets/icons8-css-logo-48.png" alt="css logo" class="css-logo">
+                <img src="assets/icons8-javascript-480.png" alt="html logo" class="html-logo">
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="project.html" class="project-link"><p>See more</p></a>
+      </div>
+    </section>
+
+    <!-- CERFITICATION CONTAINER -->
     <section class="certification-container" id="certificate">
-      <div class="container2">
+      <div class="container">
         <h2>Certifications</h2>
         <div class="certification-wrapper">
+
           <div class="certificate">
             <a href="https://www.freecodecamp.org/certification/Pezzyace/responsive-web-design" target="_blank">
               <img src="assets/freeCodeCampcert.jpg" alt="Cert image" class="cert-img">
@@ -166,6 +174,7 @@
               </div>
             </a>
           </div>
+
           <div class="certificate">
             <a href="https://olympus.mygreatlearning.com/courses/55928/certificate" target="_blank">
               <img src="assets/uiuxcert.jpg" alt="Cert image" class="cert-img">
@@ -175,6 +184,7 @@
               </div>
             </a>
           </div>
+
           <div class="certificate">
             <a href="https://olympus.mygreatlearning.com/courses/12761/certificate" target="_blank">
               <img src="assets/html cert.jpg" alt="Cert image" class="cert-img">
@@ -184,8 +194,7 @@
               </div>
             </a>
           </div>
-        </div>
-        <div class="certification-wrapper">
+
           <div class="certificate">
             <a href="https://olympus.mygreatlearning.com/courses/55928/certificate" target="_blank">
               <img src="assets/css cert.jpg" alt="Cert image" class="cert-img">
@@ -195,12 +204,23 @@
               </div>
             </a>
           </div>
+
+          <div class="certificate">
+            <a href="https://olympus.mygreatlearning.com/courses/55928/certificate" target="_blank">
+              <img src="assets/css cert.jpg" alt="Cert image" class="cert-img">
+              <div class="certification-info">
+                <h3>Great Learning</h3>
+                <p class="cert-type">JS</p>
+              </div>
+            </a>
+          </div>
+          
         </div>
       </div>
     </section>
     <section class="social-container" id="social">
       <img src="assets/03.png" alt="bg image" class="socials-bg-img">
-      <div class="container3">
+      <div class="container">
         <h2>Socials</h2>
         <div class="social-wrapper">
             <a href="https://www.linkedin.com/in/peace-akaehomen" target="_blank">
@@ -208,17 +228,23 @@
               <p>Linkedin</p>
             </a>        
             <a href="https://www.github.com/pezzyace" target="_blank">
-              <img src="assets/icons8-github-480.png" alt="githublogo">
+              <img src="assets/icons8-github-480.png" alt="github logo">
               <p>Github</p>
             </a>        
             <a href="https://www.freecodecamp.org/Pezzyace" target="_blank">
               <img src="assets/icons8-free-code-camp-480.png" alt="freecodecamp logo">
               <p>freeCodeCamp</p>
             </a>
+            <a href="https://www.twitter.com/pizzyace" target="_blank">
+              <img src="assets/icons8-twitter-500.png" alt="X logo">
+              <p>Twitter</p>
+            </a>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- FOOTER -->
   <footer id="contact">
     <div class="container4">
       <p class="logo">AGC</p>
@@ -236,8 +262,10 @@
       </div>
     </div>
   </footer>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
   <script src="main.js"></script>
 </body>
 </html>
